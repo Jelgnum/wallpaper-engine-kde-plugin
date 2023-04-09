@@ -9,11 +9,8 @@ add_subdirectory(src)
 
 
 if(BUILD_QML)
-    find_package(Qt5 COMPONENTS Gui Quick Qml REQUIRED)
+    find_package(Qt6 COMPONENTS REQUIRED Gui Quick Qml)
 
-    set(CMAKE_AUTOMOC ON) 
-    set(CMAKE_AUTORCC ON) 
-    set(CMAKE_AUTOUIC ON)
 
     add_library(${PROJECT_NAME}-qml
     STATIC
@@ -22,14 +19,11 @@ if(BUILD_QML)
     )
     target_link_libraries(${PROJECT_NAME}-qml
     PUBLIC
-        Qt5::Quick
-        Qt5::Gui
+        Qt6::Quick
+        Qt6::Gui
         glad
         ${PROJECT_NAME}
     )
     target_include_directories(${PROJECT_NAME}-qml PUBLIC qml_helper third_party)
 
-    set(CMAKE_AUTOMOC OFF) 
-    set(CMAKE_AUTORCC OFF) 
-    set(CMAKE_AUTOUIC OFF) 
 endif()
