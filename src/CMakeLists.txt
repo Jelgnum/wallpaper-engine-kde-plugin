@@ -1,13 +1,10 @@
-find_package(Qt5 COMPONENTS Quick Qml REQUIRED)
+find_package(Qt6 COMPONENTS REQUIRED Quick Qml)
 
 add_subdirectory(backend_mpv)
 
 SET(BUILD_QML ON CACHE BOOL "")
 add_subdirectory(backend_scene)
 
-set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTORCC ON)
-set(CMAKE_AUTOUIC ON)
 
 add_library(${PROJECT_NAME}
 	SHARED
@@ -19,8 +16,8 @@ add_library(${PROJECT_NAME}
 
 target_link_libraries(${PROJECT_NAME} 
 	PRIVATE
-	Qt5::Quick
-	Qt5::Qml 
+	Qt6::Quick
+	Qt6::Qml 
 	mpvbackend
 	wescene-renderer-qml
 )
