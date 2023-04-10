@@ -2,6 +2,7 @@
 A wallpaper plugin integrating [wallpaper engine](https://store.steampowered.com/app/431960/Wallpaper_Engine) into kde wallpaper setting.  
 
 ## Note
+Qt-6 branch in nonfunctioning 
 - Known issues:
   - Some scene wallpapers may **crash** your KDE.  
     Remove `WallpaperSource` line in `~/.config/plasma-org.kde.plasma.desktop-appletsrc` and restart KDE to fix.  
