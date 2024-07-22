@@ -18,6 +18,14 @@ Qt-6 branch in nonfunctioning
 If you are using amd, please choose RADV driver.  
 
 ## Install
+
+Gentoo:
+```sh
+sudo emerge -av eselect-repository
+sudo eselect repository enable gig
+sudo emerge -av kde-misc/wallpaper-engine-kde-plugin
+```
+
 #### Dependencies
 Debian:  
 ```sh
@@ -37,7 +45,7 @@ qt5-qtx11extras-devel qt5-qtwebchannel-devel qt5-qtwebsockets-devel cmake
 
 Arch:  
 ```sh
-sudo pacman -S extra-cmake-modules plasma-framework gst-libav \
+sudo pacman -S extra-cmake-modules plasma-framework5 gst-libav \
 base-devel mpv python-websockets qt5-declarative qt5-websockets qt5-webchannel vulkan-headers cmake
 ```
 
@@ -54,7 +62,7 @@ openSUSE:
 sudo zypper in vulkan-devel plasma-framework-devel plasma5-workspace-devel \
 libqt5-qtwebsockets-devel mpv-devel python310-websockets \
 libqt5-qtx11extras-devel liblz4-devel gstreamer-plugins-libav \
-libqt5-qtbase-private-headers-devel cmake
+libqt5-qtbase-private-headers-devel cmake extra-cmake-modules
 ```
 
 Fedora Kinoite:  
